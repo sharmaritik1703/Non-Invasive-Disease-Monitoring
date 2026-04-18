@@ -51,7 +51,7 @@ def perform_diabetes_test(test_data):
     
 def perform_bp_test(test_data):
     # Perform feature selection for BP test
-    test_data = test_data.drop(columns=['maxBP', 'minBP'], errors='ignore', axis=1)
+    test_data = test_data.drop(columns=['maxBP', 'minBP'], errors='ignore')
     features = extract_bp_features(test_data)
 
     # Load the models for BP prediction
