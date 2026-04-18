@@ -34,7 +34,7 @@ def compute_integral_features(signal_samples):
     else:
         return [0] * 2
 
-def compute_fft_features(sample, sampling_rate=100):
+def compute_fft_features(sample, sampling_rate=10):
     if len(sample) > 1:
         length = len(sample)
         fft = rfft(sample)
@@ -52,7 +52,7 @@ def compute_fft_features(sample, sampling_rate=100):
     else:
         return [0] * 4
 
-def denoise_signal(signal, sampling_rate=100):
+def denoise_signal(signal, sampling_rate=10):
     """
     Apply FFT, filter the signal based on the cutoff frequency, and return the inverse RFFT.
 
